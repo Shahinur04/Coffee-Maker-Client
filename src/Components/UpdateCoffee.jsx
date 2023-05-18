@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
+import { useLoaderData } from "react-router-dom";
 
 const UpdateCoffee = () => {
-    return (
-        <div>
-            <h1 className='text-6xl text-purple-600'>Coffee</h1>
-        </div>
-    );
+  const coffee = useLoaderData();
+  const { _id, name, quantity, supplier, taste, category, details, photo } =coffee;
+
+  return (
+    <div>
+      <h1 >Coffee:{name}</h1>
+    </div>
+  );
 };
 
 export default UpdateCoffee;
